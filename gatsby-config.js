@@ -5,10 +5,24 @@ require(`dotenv`).config({
 module.exports = {
   siteMetadata: {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+<<<<<<< HEAD
+=======
+    navigation: [
+      {
+        title: `Blog`,
+        slug: `/blog`,
+      },
+      {
+        title: `About`,
+        slug: `/about`,
+      },
+    ],
+>>>>>>> 24c7ff8... Update gatsby-starter-minimal-blog from LekoArts/gatsby-themes
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+<<<<<<< HEAD
       // See the theme's README for all available options
       options: {
         navigation: [
@@ -32,6 +46,9 @@ module.exports = {
           },
         ],
       },
+=======
+      options: {},
+>>>>>>> 24c7ff8... Update gatsby-starter-minimal-blog from LekoArts/gatsby-themes
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -51,12 +68,21 @@ module.exports = {
         theme_color: `#6B46C1`,
         display: `standalone`,
         icons: [
+<<<<<<< HEAD
           {
             src: `/android-chrome-192x192.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
+=======
+          {
+            src: `/android-chrome-192x192.png`,
+            sizes: `192x192`,
+            type: `image/png`,
+          },
+          {
+>>>>>>> 24c7ff8... Update gatsby-starter-minimal-blog from LekoArts/gatsby-themes
             src: `/android-chrome-512x512.png`,
             sizes: `512x512`,
             type: `image/png`,

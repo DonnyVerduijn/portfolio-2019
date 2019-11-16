@@ -8,11 +8,7 @@
  * @see https://developer.spotify.com/technologies/widgets/spotify-play-button/
  */
 
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-// Dimension prop type
-const dimensionPropType = PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+import React, { Component } from "react"
 
 // Size presets, defined by Spotify
 const sizePresets = {
@@ -38,7 +34,7 @@ class SpotifyPlayer extends Component {
     const { uri, view, theme } = this.props
     let { size } = this.props
 
-    if (typeof size === 'string') {
+    if (typeof size === `string`) {
       size = sizePresets[size]
     }
 
@@ -54,32 +50,6 @@ class SpotifyPlayer extends Component {
       />
     )
   }
-}
-
-SpotifyPlayer.propTypes = {
-  // Spotify URI
-  uri: PropTypes.string.isRequired,
-
-  // Size as either a preset or as custom dimensions
-  size: PropTypes.oneOfType([
-    PropTypes.oneOf(['large', 'compact']),
-    PropTypes.shape({
-      width: dimensionPropType,
-      height: dimensionPropType,
-    }),
-  ]),
-
-  // View
-  view: PropTypes.oneOf(['list', 'coverart']),
-
-  // Theme
-  theme: PropTypes.oneOf(['black', 'white']),
-}
-
-SpotifyPlayer.defaultProps = {
-  size: 'large',
-  view: 'list',
-  theme: 'black',
 }
 
 export default SpotifyPlayer
